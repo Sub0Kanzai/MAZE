@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  #maze {
+    display: grid;
+    grid-template-columns: repeat(10, 40px); /* Adjust columns based on maze size */
+    grid-template-rows: repeat(10, 40px); /* Adjust rows based on maze size */
+    background-color: #333;
+    border: 2px solid transparent; /* Added to ensure consistent grid border */
+    position: relative; /* Ensure maze is relatively positioned for absolute positioning */
+  }
+  
+  #maze .cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #666;
+    box-sizing: border-box; /* Ensure border is included in width and height */
+  }
+  
+  .player {
+    background-color: yellow; /* Player color */
+    border-radius: 50%;
+    position: absolute; /* Position the player absolutely within its parent */
+    width: 30px; /* Adjust player size */
+    height: 30px; /* Adjust player size */
+    top: 5px; /* Adjust player position */
+    left: 5px; /* Adjust player position */
+    z-index: 1; /* Ensure player is above the grid */
+  }
+  
